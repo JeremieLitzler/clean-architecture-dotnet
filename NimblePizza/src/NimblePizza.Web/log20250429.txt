@@ -1,0 +1,84 @@
+2025-04-29 16:03:13.658 +02:00 [INF] Registered 5 endpoints in 1’171 milliseconds.
+2025-04-29 16:03:15.115 +02:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+2025-04-29 16:03:15.285 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contributors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Contributors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL,
+    "Status" INTEGER NOT NULL,
+    "PhoneNumber_CountryCode" TEXT NULL,
+    "PhoneNumber_Number" TEXT NULL,
+    "PhoneNumber_Extension" TEXT NULL
+);
+2025-04-29 16:03:15.578 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2025-04-29 16:03:15.766 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-04-29 16:03:15.789 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Contributors" ("Name", "Status")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2025-04-29 16:03:15.961 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2025-04-29 16:03:16.033 +02:00 [INF] Now listening on: https://localhost:57679
+2025-04-29 16:03:16.035 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-29 16:03:16.038 +02:00 [INF] Hosting environment: Development
+2025-04-29 16:03:16.041 +02:00 [INF] Content root path: C:\Git\GitHub\clean-architecture-dotnet\NimblePizza\src\NimblePizza.Web
+2025-04-29 16:03:30.243 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:57679/ - null null
+2025-04-29 16:03:30.310 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:57679/ - 404 0 null 67.5561ms
+2025-04-29 16:03:30.324 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:57679/, Response status code: 404
+2025-04-29 16:03:38.665 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:57679/swagger/ui - null null
+2025-04-29 16:03:38.671 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:57679/swagger/ui - 404 0 null 5.9668ms
+2025-04-29 16:03:38.678 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:57679/swagger/ui, Response status code: 404
+2025-04-29 16:03:46.000 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:57679/swagger/index/ui - null null
+2025-04-29 16:03:46.005 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:57679/swagger/index/ui - 404 0 null 4.841ms
+2025-04-29 16:03:46.014 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:57679/swagger/index/ui, Response status code: 404
+2025-04-29 16:04:01.420 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:57679/swagger/index.html - null null
+2025-04-29 16:04:01.532 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:57679/swagger/index.html - 200 null text/html; charset=utf-8 111.329ms
+2025-04-29 16:04:01.584 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:57679/swagger/swagger-ui.css - null null
+2025-04-29 16:04:01.627 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:57679/swagger/index.css - null null
+2025-04-29 16:04:01.627 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:57679/swagger/swagger-ui-standalone-preset.js - null null
+2025-04-29 16:04:01.628 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:57679/swagger/swagger-ui-bundle.js - null null
+2025-04-29 16:04:01.635 +02:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2025-04-29 16:04:01.635 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-04-29 16:04:01.647 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:57679/swagger/index.css - 200 218 text/css 20.0167ms
+2025-04-29 16:04:01.650 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:57679/swagger/swagger-ui.css - 200 152073 text/css 66.1487ms
+2025-04-29 16:04:01.655 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-04-29 16:04:01.670 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-04-29 16:04:01.677 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:57679/swagger/swagger-ui-standalone-preset.js - 200 230294 text/javascript 49.1742ms
+2025-04-29 16:04:01.678 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:57679/swagger/swagger-ui-bundle.js - 200 1452754 text/javascript 50.4946ms
+2025-04-29 16:04:02.487 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:57679/swagger/v1/swagger.json - null null
+2025-04-29 16:04:02.500 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-04-29 16:04:02.518 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:57679/swagger/favicon-32x32.png - null null
+2025-04-29 16:04:02.524 +02:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-04-29 16:04:02.528 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:57679/swagger/favicon-32x32.png - 200 628 image/png 10.2053ms
+2025-04-29 16:04:02.928 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:57679/swagger/v1/swagger.json - 200 null application/json; charset=utf-8 441.0345ms
+2025-04-29 16:10:32.319 +02:00 [INF] Application is shutting down...
+2025-04-29 16:12:41.971 +02:00 [INF] Registered 5 endpoints in 298 milliseconds.
+2025-04-29 16:12:42.689 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2025-04-29 16:12:42.927 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2025-04-29 16:12:43.022 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2025-04-29 16:12:43.089 +02:00 [INF] Now listening on: https://localhost:57679
+2025-04-29 16:12:43.091 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-29 16:12:43.092 +02:00 [INF] Hosting environment: Development
+2025-04-29 16:12:43.094 +02:00 [INF] Content root path: C:\Git\GitHub\clean-architecture-dotnet\NimblePizza\src\NimblePizza.Web
+2025-04-29 16:15:36.492 +02:00 [INF] Application is shutting down...
+2025-04-29 16:19:42.937 +02:00 [INF] Registered 5 endpoints in 502 milliseconds.
+2025-04-29 16:19:44.181 +02:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2025-04-29 16:19:44.459 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Contributors" AS "c")
+2025-04-29 16:19:44.645 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert
+2025-04-29 16:19:44.721 +02:00 [INF] Now listening on: https://localhost:57679
+2025-04-29 16:19:44.723 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-29 16:19:44.724 +02:00 [INF] Hosting environment: Development
+2025-04-29 16:19:44.726 +02:00 [INF] Content root path: C:\Git\GitHub\clean-architecture-dotnet\NimblePizza\src\NimblePizza.Web

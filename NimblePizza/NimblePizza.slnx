@@ -1,0 +1,30 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="CleanArchitecture.nuspec" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/NimblePizza.AspireHost/NimblePizza.AspireHost.csproj" />
+    <Project Path="src/NimblePizza.Core/NimblePizza.Core.csproj" />
+    <Project Path="src/NimblePizza.Infrastructure/NimblePizza.Infrastructure.csproj" />
+    <Project Path="src/NimblePizza.ServiceDefaults/NimblePizza.ServiceDefaults.csproj" />
+    <Project Path="src/NimblePizza.UseCases/NimblePizza.UseCases.csproj" />
+    <Project Path="src/NimblePizza.Web/NimblePizza.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/NimblePizza.FunctionalTests/NimblePizza.FunctionalTests.csproj">
+      <BuildDependency Project="src/NimblePizza.Web/NimblePizza.Web.csproj" />
+    </Project>
+    <Project Path="tests/NimblePizza.IntegrationTests/NimblePizza.IntegrationTests.csproj">
+      <BuildDependency Project="src/NimblePizza.Infrastructure/NimblePizza.Infrastructure.csproj" />
+    </Project>
+    <Project Path="tests/NimblePizza.UnitTests/NimblePizza.UnitTests.csproj" />
+  </Folder>
+</Solution>

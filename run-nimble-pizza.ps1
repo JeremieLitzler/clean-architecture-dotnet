@@ -1,0 +1,1 @@
+dotnet run --project .\NimblePizza\src\NimblePizza.Web\
